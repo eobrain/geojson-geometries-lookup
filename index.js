@@ -1,10 +1,10 @@
 'use strict';
 
-const RBush = require('rbush');
-const tbbox = require('@turf/bbox').default;
+import RBush from 'rbush';
+import tbbox from '@turf/bbox';
 
-const tcontains = require('@turf/boolean-contains').default;
-const GeoJsonGeometries = require('geojson-geometries');
+import tcontains from '@turf/boolean-contains';
+import GeoJsonGeometries from 'geojson-geometries';
 
 const POINT = 'Point';
 const LINE_STRING = 'LineString';
@@ -27,7 +27,7 @@ function getGeometryDimension(geometry) {
   }
 }
 
-class GeoJsonGeometriesLookup {
+export default class {
   /**
    * Create an instance of the GeoJSON lookup class.
    * @public
@@ -216,5 +216,3 @@ class GeoJsonGeometriesLookup {
     return this.forEachContainer(geometry, options);
   }
 }
-
-module.exports = GeoJsonGeometriesLookup;

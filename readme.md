@@ -106,7 +106,7 @@ We would love to have it in our list:
 
 ## Usage
 ```javascript
-const GeoJsonGeometriesLookup = require('geojson-geometries-lookup');
+import GeoJsonGeometriesLookup from 'geojson-geometries-lookup';
 
 const geojson = {type: 'FeatureCollection',
   features: [{
